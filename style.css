@@ -1,0 +1,120 @@
+* {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    box-sizing: border-box;
+    text-decoration: none;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+}
+
+header {
+    width: 100%;
+    height: 80px;
+    background: #333;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 150px;
+}
+
+.hamburger {
+    display: none;
+}
+
+.hamburger {
+    font-size: 30px;
+    color: white;
+    cursor: pointer;
+}
+
+.logo {
+    font-size: 35px;
+    font-weight: bold;
+    color: white;
+}
+
+.nav-bar ul {
+    display: flex;
+}
+
+.nav-bar ul li a {
+    display: block;
+    font-size: 20px;
+    padding: 10px 25px;
+    color: white;
+    border-radius: 35px;
+    transition: 0.2s;
+    margin: 0 3px;
+}
+
+.nav-bar ul li a:hover {
+    background: #edede3;
+    color: #333;
+}
+
+.nav-bar ul li a.active {
+    background: #edede3;
+    color: #333;
+}
+
+section {
+    background: url(natyra.jpg) no-repeat;
+    background-size: cover;
+    height: calc(100vh - 80px);
+}
+
+@media only screen and (max-width: 1320px) {
+    header {
+        padding: 0 50px;
+    }
+}
+
+@media only screen and (max-width: 1100px) {
+    header {
+        padding: 0 30px;
+    }
+}
+
+@media only screen and (max-width: 900px) {
+    .hamburger {
+        display: block;
+        cursor: pointer;
+    }
+
+    .nav-bar {
+        height: 0;
+        position: absolute;
+        top: 70px;
+        left: 0;
+        right: 0;
+        width: 100vw;
+        background: #333;
+        transition: 0.2s;
+        overflow: hidden;
+    }
+
+    .nav-bar.active {
+        height: 420px;
+    }
+
+    .nav-bar ul {
+        display: block;
+        width: fit-content;
+        margin: 70px auto 0 auto;
+        text-align: center;
+        transition: 0.5s;
+        opacity: 0;
+    }
+
+    .nav-bar.active ul {
+        opacity: 1;
+    }
+
+    .nav-bar ul li a {
+        margin-bottom: 10px;
+    }
+
+}
